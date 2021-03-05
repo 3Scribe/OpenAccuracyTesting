@@ -33,7 +33,7 @@ jobs:
           author_name: 3Scribe Updates Stats bot
           author_email: support@3scri.be
           message: 'Auto-update of the stats files following an update to the transcripts folder.'
-          add: '["*.csv", "*.fdb"] --force'
+          add: '*.csv --force'
         
         
         
