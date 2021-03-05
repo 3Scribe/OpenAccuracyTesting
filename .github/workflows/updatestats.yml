@@ -19,9 +19,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
         
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -30,11 +27,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run the collate command
         uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
       - run: npm install
         working-directory: ./Apps/Scoring
-      - run: collage
+      - run: collate
         working-directory: ./Apps/Scoring
       # Runs a single command using the runners shell
       - name: Run a one-line script
