@@ -29,7 +29,13 @@ jobs:
         run: ls				
       # Runs a single command using the runners shell
       - name: Switch to the Scoring app's directory
-        run: cd Apps/Scoring
+        run: cd Apps
+      - name: Get directory listing
+        run: ls				
+      - name: Switch to the Scoring app's directory
+        run: cd Scoring
+      - name: Get directory listing
+        run: ls				
       # Runs a single command using the runners shell
       - name: Run the collate command
         run: node collate
