@@ -26,12 +26,16 @@ try {
     var commandLine = null;
     var processList = [];
 
+    console.log(process.argv.slice());
+
     if (process.argv.slice()[0].toLowerCase().indexOf("node.exe") != -1) {
         commandLine = process.argv.slice(2);
     }
     else {
         commandLine = process.argv.slice(1);
     }
+
+    console.log(commandLine);
 
     // Correct amount of parameters
 
