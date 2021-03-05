@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-node@v1
       - run: npm install
         working-directory: ./Apps/Scoring
-      - run: collate
+      - run: node collate
         working-directory: ./Apps/Scoring
       # Runs a single command using the runners shell
       - name: Run a one-line script
