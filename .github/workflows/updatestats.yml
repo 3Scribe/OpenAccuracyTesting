@@ -4,13 +4,13 @@ name: Auto-update the statistics when transcripts are updated.
 
 # Controls when the action will run. 
 on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     paths:
     - 'Transcripts/**.json'
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
