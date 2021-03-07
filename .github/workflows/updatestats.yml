@@ -28,9 +28,9 @@ jobs:
             node score all
             node collate    
       - name: Generate project readme.md file with updated stats
-        uses: r-lib/actions/setup-r@v1
-      - run: Rscript -e "rmarkdown::render('README.rmd')"
-      #   working-directory: ./Apps/Stats
+        uses: lc5415/rmarkdown-action@v1
+        with: 
+          input_file: ../Stats/README.rmd
       - name: Push the updated stats back to the repo
         uses: EndBug/add-and-commit@v7
         with:
