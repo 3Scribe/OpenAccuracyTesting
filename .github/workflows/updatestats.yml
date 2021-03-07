@@ -31,10 +31,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install rmarkdown
         run:  | 
-              Rscript -e 'install.packages("rmarkdown")'             
-              Rscript -e 'install.packages("ggplot2")'             
-              Rscript -e 'install.packages("plyr")'             
-              Rscript -e 'install.packages("pander")'             
+              Rscript -e 'install.packages(c("rmarkdown","ggplot2","plyr","pander"))'
       - name: Generate project readme.md file with updated stats
         run:  Rscript -e 'rmarkdown::render("README.rmd")'
         working-directory: ./Apps/Stats
