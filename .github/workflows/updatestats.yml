@@ -33,6 +33,7 @@ jobs:
         run:  | 
               Rscript -e 'install.packages("rmarkdown")'             
               Rscript -e 'install.packages("ggplot2")'             
+              Rscript -e 'install.packages("plyr")'             
       - name: Generate project readme.md file with updated stats
         run:  Rscript -e 'rmarkdown::render("../Stats/README.rmd")'
       - name: Push the updated stats back to the repo
