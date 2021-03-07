@@ -27,9 +27,12 @@ jobs:
             npm install
             node score all
             node collate    
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install rmarkdown
+        run:  Rscript -e 'install.packages("rmarkdown")'             
       - name: Generate project readme.md file with updated stats
-        uses: r-lib/actions/setup-r@v1
-      - run:  Rscript -e 'library(knitr); knit("../Stats/README.rmd")'
+        run:  Rscript -e 'rmarkdown::render("../Stats/README.rmd")'
       - name: Push the updated stats back to the repo
         uses: EndBug/add-and-commit@v7
         with:
