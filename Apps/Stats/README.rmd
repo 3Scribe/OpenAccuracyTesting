@@ -1,0 +1,70 @@
+---
+output: github_document
+
+knit: (
+  function(inputFile, encoding) { 
+    rmarkdown::render( 
+      input       = inputFile, 
+      encoding    = encoding,      
+      output_file = "README.md") })
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+# Setup of the data frame and required libraries
+
+library("ggplot2")
+library(plyr)
+require(pander)
+
+panderOptions('digits', 3)
+panderOptions('round', 3)
+panderOptions('keep.trailing.zeros', TRUE)
+panderOptions('keep.line.breaks', TRUE)
+
+stats_csv <- read.csv(file = "../../data/scores.csv")
+services_csv <- read.csv(file = "../../data/services.csv")
+```
+
+# Open Accuracy Testing
+
+### A project for testing and scoring the accuracy of cloud based speech transcription services 
+
+#### <span style="color:green">There are currently <span style="color:blue">***`r nrow(services_csv)`***</span> services being tested against <span style="color:blue">***`r length(unique(stats_csv$Key))`***</span> files, grouped into <span style="color:blue">***`r length(unique(stats_csv$Corpus))`***</span> corpus.</span>
+
+
+
+
+```{r echo=FALSE, warning=FALSE, comment="", results = 'asis' }
+pandoc.list(sprintf("[%s](%s)", services_csv$DisplayName,services_csv$URL))
+```
+
+
+
+
+
+
+
+
+```{r echo=FALSE, warning=FALSE, comment="", results = 'asis'}
+
+pandoc.table(ddply(ddply(stats_csv, .(Corpus, Service), summarize, Samples=length(Key), WER=mean(WER)*100), .(WER)), justify = c('left', 'left', 'right', 'right'))
+  
+```
+
+
+Attributions
+
+https://github.com/ndaidong/flat-db
+
+https://github.com/ryanvolum/word-error-rate
+
+https://github.com/ryu1kn/csv-writer
+
+
+
+
+
