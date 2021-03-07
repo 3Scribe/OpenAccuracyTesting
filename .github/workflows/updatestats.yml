@@ -33,7 +33,7 @@ jobs:
         run:  | 
               Rscript -e 'install.packages(c("rmarkdown","ggplot2","plyr","pander"))'
       - name: Generate project readme.md file with updated stats
-        run:  Rscript -e 'rmarkdown::render("README.rmd")'
+        run:  Rscript -e 'rmarkdown::render("README.rmd", output_dir = "./")'
         working-directory: ./Apps/Stats
       - name: Push the updated stats back to the repo
         uses: EndBug/add-and-commit@v7
@@ -41,7 +41,7 @@ jobs:
           author_name: 3Scribe Updates Stats bot
           author_email: support@3scri.be
           message: 'Auto-update of the stats files following an update to the transcripts folder.'
-          add: '["*.csv","*.fdb","*.md"]'
+          add: '["*.csv","*.fdb","*.md","*.png"]'
         
         
         
