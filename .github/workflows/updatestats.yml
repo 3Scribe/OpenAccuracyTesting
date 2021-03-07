@@ -29,7 +29,7 @@ jobs:
             node collate    
       - name: Generate project readme.md file with updated stats
         uses: r-lib/actions/setup-r@v1
-      # - run: Rscript -e "rmarkdown::render('README.rmd')"
+      - run: Rscript -e "rmarkdown::render('README.rmd')"
       #   working-directory: ./Apps/Stats
       - name: Push the updated stats back to the repo
         uses: EndBug/add-and-commit@v7
