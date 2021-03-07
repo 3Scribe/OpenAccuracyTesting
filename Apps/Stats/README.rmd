@@ -25,8 +25,8 @@ panderOptions('round', 3)
 panderOptions('keep.trailing.zeros', TRUE)
 panderOptions('keep.line.breaks', TRUE)
 
-stats_csv <- read.csv(file = "../../data/scores.csv")
-services_csv <- read.csv(file = "../../data/services.csv")
+stats_csv <- read.csv(file = "../../Data/scores.csv")
+services_csv <- read.csv(file = "../../Data/services.csv")
 ```
 
 # Open Accuracy Testing
@@ -51,7 +51,7 @@ pandoc.list(sprintf("[%s](%s)", services_csv$DisplayName,services_csv$URL))
 
 ```{r echo=FALSE, warning=FALSE, comment="", results = 'asis'}
 
-pandoc.table(ddply(ddply(stats_csv, .(Corpus, Service), summarize, Samples=length(Key), WER=mean(WER)*100), .(WER)), justify = c('left', 'left', 'right', 'right'))
+pandoc.table(ddply(ddply(join(stats_csv, services_csv, by="Service", type="inner"), .(DisplayName), summarize, Samples=length(Key), WER=mean(WER)*100), .(WER)), justify = c('left', 'right', 'right'))
   
 ```
 
