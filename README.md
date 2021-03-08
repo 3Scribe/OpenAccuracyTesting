@@ -3,7 +3,7 @@
 
 ### A project for testing and scoring the accuracy of cloud based speech transcription services
 
-#### <span style="color:green">There are currently <span style="color:blue">***8***</span> services being tested against <span style="color:blue">***11***</span> files, grouped into <span style="color:blue">***1***</span> corpus.</span>
+#### <span style="color:green">There are currently <span style="color:blue">***8***</span> services being tested against <span style="color:blue">***12***</span> files, grouped into <span style="color:blue">***1***</span> corpus.</span>
 
   - [3Scribe](https://3scri.be)
   - [AWS Transcribe](https://aws.amazon.com/transcribe/)
@@ -19,11 +19,11 @@
 
 | DisplayName    | Samples |  WER |
 | :------------- | ------: | ---: |
-| 3Scribe        |      11 | 12.6 |
-| AWS Transcribe |      11 | 15.3 |
-| AssenblyAI     |      11 | 19.6 |
-| Speechmatics   |      11 | 21.7 |
-| RevAI          |      11 | 24.3 |
+| 3Scribe        |      12 | 12.1 |
+| AWS Transcribe |      12 | 14.9 |
+| AssenblyAI     |      12 | 19.9 |
+| Speechmatics   |      12 | 21.9 |
+| RevAI          |      12 | 24.6 |
 
 Attributions
 
