@@ -27,15 +27,21 @@ panderOptions('keep.line.breaks', TRUE)
 
 stats_csv <- read.csv(file = "../../Data/scores.csv")
 services_csv <- read.csv(file = "../../Data/services.csv")
+corpus_csv <- read.csv(file = "../../Data/corpus.csv")
 ```
-
 # Open Accuracy Testing
 
-### A project for testing and scoring the accuracy of cloud based speech transcription services 
+## A project for testing and scoring the accuracy of cloud based speech transcription services  
 
-#### <span style="color:green">There are currently <span style="color:blue">***`r nrow(services_csv)`***</span> services being tested against <span style="color:blue">***`r length(unique(stats_csv$Key))`***</span> files, grouped into <span style="color:blue">***`r length(unique(stats_csv$Corpus))`***</span> corpus.</span>
+#### <span style="color:green">There are currently <span style="color:blue">***`r nrow(services_csv)`***</span> services being tested against <span style="color:blue">***`r length(unique(stats_csv$Key))`***</span> samples, grouped into <span style="color:blue">***`r length(unique(stats_csv$Corpus))`***</span> corpus.</span>
+
+#### Synopis  
 
 
+#### What it measures
+
+
+#### Who it tests
 
 
 ```{r echo=FALSE, warning=FALSE, comment="", results = 'asis' }
@@ -43,28 +49,31 @@ pandoc.list(sprintf("[%s](%s)", services_csv$DisplayName,services_csv$URL))
 ```
 
 
+#### What samples it uses
 
-
-
-
-
+There are some standard sets of data such as LibriVoice and ClearVoice that are used to train speech to text services and we do include them in our test sets.  However, we're not a great fan of them for scoring because they're just short, simple, clearly recorded samples and don't really tax a service too much.  So, in addition to those sets, we've tried to include samples that challenge, samples that have been used by other writers in their articles measuring ASR accuracy, samples that are used as tests to hire manual transcribers and samples that are of poor quality such as phone call recordings.  Currently we have `r length(unique(stats_csv$Key))` samples grouped into `r length(unique(stats_csv$Corpus))` different corpus.  We've stored the audio files in a separate GitHub repo, to reduce the strain on the automated action having to check them out, and the repo can be found [https://github.com/3Scribe/OpenAccuracyTestFiles](here).  The repos README.md file contains details about each of the corpus but here is a quick summary:
 
 ```{r echo=FALSE, warning=FALSE, comment="", results = 'asis'}
-
-pandoc.table(ddply(ddply(join(stats_csv, services_csv, by="Service", type="inner"), .(DisplayName), summarize, Samples=length(Key), WER=mean(WER)*100), .(WER)), justify = c('left', 'right', 'right'))
-  
+panderOptions("table.split.table", Inf)
+pandoc.table(ddply(count(join(corpus_csv, stats_csv, by="Corpus", type="inner"), .(Corpus, DisplayName, Description, Source, Key)), .(sprintf("**%s**", DisplayName), Description, Source), summarize, Samples=length(Key)), col.names=c("Name", "Description", "Source", "Samples"),  justify = c('left', 'left', 'left', 'right'))
 ```
 
+#### Automation
 
-Attributions
+
+#### Future
+
+
+
+#### Attributions
+
+```{r echo=FALSE, warning=FALSE, comment="", results = 'asis'}
+pandoc.table(ddply(ddply(join(stats_csv, services_csv, by="Service", type="inner"), .(DisplayName), summarize, Samples=length(Key), WER=mean(WER)*100), .(WER)), justify = c('left', 'right', 'right')) 
+```
 
 https://github.com/ndaidong/flat-db
 
 https://github.com/ryanvolum/word-error-rate
 
 https://github.com/ryu1kn/csv-writer
-
-
-
-
 
