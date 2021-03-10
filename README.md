@@ -23,13 +23,15 @@ you have samples you think should be part of the tests and would like to
 be involved, please reach out to us. So, without further ado, here is
 the current standings in the accuracy leaderboard:
 
-| DisplayName    | Samples |   WER |
-| :------------- | ------: | ----: |
-| 3Scribe        |      18 |  9.36 |
-| AWS Transcribe |      18 | 12.72 |
-| AssenblyAI     |      18 | 17.26 |
-| Speechmatics   |      18 | 19.59 |
-| RevAI          |      18 | 22.02 |
+| DisplayName                  | Samples |   WER |
+| :--------------------------- | ------: | ----: |
+| 3Scribe                      |      18 |  9.36 |
+| AWS Transcribe               |      18 | 12.72 |
+| AssenblyAI                   |      18 | 17.26 |
+| Speechmatics                 |      18 | 19.59 |
+| RevAI                        |      18 | 22.02 |
+| Microsoft Cognitive Services |      18 | 23.05 |
+| IBM Watson                   |      18 | 36.76 |
 
 Now I’m not sure if 3Scribe will be at the top of that leaderboard when
 you read this. But if we’re not, you can believe we’re working hard on
