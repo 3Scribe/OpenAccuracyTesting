@@ -1,2 +1,2 @@
 Corpus,DisplayName,Description,Source
-rcast,RCast,A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic.  N.B. This corpus will be renamed to VoiceLogic once samples that showcase their other services are imported.  ,https://voicelogic.com/samples/
+voicelogic,VoiceLogic,A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic.,https://voicelogic.com/samples/
