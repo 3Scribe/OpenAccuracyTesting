@@ -3,7 +3,7 @@
 
 ## A project for testing and scoring the accuracy of cloud based speech transcription services
 
-#### <span style="color:green">There are currently <span style="color:blue">***8***</span> services being tested against <span style="color:blue">***12***</span> samples, grouped into <span style="color:blue">***1***</span> corpus.</span>
+#### <span style="color:green">There are currently <span style="color:blue">***8***</span> services being tested against <span style="color:blue">***18***</span> samples, grouped into <span style="color:blue">***1***</span> corpus.</span>
 
 #### Synopis
 
@@ -23,13 +23,13 @@ you have samples you think should be part of the tests and would like to
 be involved, please reach out to us. So, without further ado, here is
 the current standings in the accuracy leaderboard:
 
-| DisplayName    | Samples |  WER |
-| :------------- | ------: | ---: |
-| 3Scribe        |      12 | 12.1 |
-| AWS Transcribe |      12 | 14.9 |
-| AssenblyAI     |      12 | 19.9 |
-| Speechmatics   |      12 | 21.9 |
-| RevAI          |      12 | 24.6 |
+| DisplayName    | Samples |   WER |
+| :------------- | ------: | ----: |
+| 3Scribe        |      18 |  9.36 |
+| AWS Transcribe |      18 | 12.72 |
+| AssenblyAI     |      18 | 17.26 |
+| Speechmatics   |      18 | 19.59 |
+| RevAI          |      18 | 22.02 |
 
 Now I’m not sure if 3Scribe will be at the top of that leaderboard when
 you read this. But if we’re not, you can believe we’re working hard on
@@ -127,7 +127,7 @@ really tax a service too much. So, in addition to those sets, we’ve
 tried to include samples that challenge; samples that have been used by
 other writers in their articles measuring ASR accuracy; samples that are
 used as tests to hire manual transcribers and samples that are of poor
-quality such as phone call recordings. Currently we have 12 samples
+quality such as phone call recordings. Currently we have 18 samples
 grouped into 1 different corpus. We’ve stored the audio files in a
 separate GitHub repo, to reduce the strain on the automated action
 having to check them out, and that repo can be found
@@ -135,9 +135,9 @@ having to check them out, and that repo can be found
 README.md file contains details about each of the corpus but here is a
 quick summary:
 
-| Name      | Description                                                                                                                                                                                                                            | Source                            | Samples |
-| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------- | ------: |
-| **RCast** | A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic. N.B. This corpus will be renamed to VoiceLogic once samples that showcase their other services are imported. | <https://voicelogic.com/samples/> |      12 |
+| Name           | Description                                                                                                               | Source                            | Samples |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------ | :-------------------------------- | ------: |
+| **VoiceLogic** | A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic. | <https://voicelogic.com/samples/> |      18 |
 
 #### Automation
 
