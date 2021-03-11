@@ -35,6 +35,7 @@ try {
         corpus: '',
         key: '',
         service: '',
+        duration: 0,
         wer: 0.0,
     });
 
@@ -46,6 +47,7 @@ try {
             { id: 'corpus', title: 'Corpus' },
             { id: 'key', title: 'Key' },
             { id: 'service', title: 'Service' },
+            { id: 'duration', title: 'Duration' },
             { id: 'wer', title: 'WER' }
         ]
     });
@@ -60,6 +62,7 @@ try {
             corpus: Result.corpus,
             key: Result.key,
             service: Result.service,
+            duration: Result.duration,
             wer: Result.wer,
         });
     });

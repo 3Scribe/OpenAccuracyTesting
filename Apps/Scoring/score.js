@@ -131,6 +131,7 @@ try {
         corpus: '',
         key: '',
         service: '',
+        duration: 0,
         wer: 0.0,
     });
 
@@ -144,7 +145,7 @@ try {
         var referenceData = JSON.parse(fs.readFileSync(targetFile.referenceFile, 'utf8'));
         var testData = JSON.parse(fs.readFileSync(targetFile.subjectFile, 'utf8'));
 
-        var WER = WERScore.wordErrorRate(referenceData.Transcript, testData.Transcript);
+        var WER = WERScore.wordErrorRate(referenceData.Transcript.toLowerCase(), testData.Transcript.toLowerCase());
 
         // Store the result in the flat file database
 
@@ -159,6 +160,7 @@ try {
                 corpus: targetFile.corpus.toLowerCase(),
                 key: targetFile.keyName.toLowerCase(),
                 service: targetFile.service.toLowerCase(),
+                duration: referenceData.Duration,
                 wer: WER,
             }]);
         }
@@ -167,6 +169,7 @@ try {
                 corpus: targetFile.corpus.toLowerCase(),
                 key: targetFile.keyName.toLowerCase(),
                 service: targetFile.service.toLowerCase(),
+                duration: referenceData.Duration,
                 wer: WER,
             });
         }

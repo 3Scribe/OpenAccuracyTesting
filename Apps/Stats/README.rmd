@@ -29,6 +29,21 @@ stats_csv <- read.csv(file = "../../Data/scores.csv")
 services_csv <- read.csv(file = "../../Data/services.csv")
 corpus_csv <- read.csv(file = "../../Data/corpus.csv")
 ```
+
+```{r echo = FALSE}
+hms <- function(t){
+  hours <- as.integer(t / 3600)
+  minutes <- as.integer((t - (hours * 3600)) / 60)
+  seconds <- as.integer(t - (hours * 3600) - (minutes * 60))
+  
+  sprintf("%s%s%s",
+          ifelse(hours>0, sprintf("%d %s%s", hours, ifelse(hours>1, "hours", "hour"), ifelse(((minutes>0) & (seconds>0)), ", ", ifelse((((minutes>0) & (seconds==0))||((minutes==0) & (seconds>0))), " and ", ""))), ""),
+          ifelse(minutes>0, sprintf("%d %s%s", minutes, ifelse(minutes>1, "minutes", "minute"), ifelse(seconds>0, " and ", "")), ""),
+          ifelse(seconds>0, sprintf("%d %s", seconds, ifelse(seconds>1, "seconds", "second")), "")
+          )
+}
+```
+
 # Open Accuracy Testing
 
 ## A project for testing and scoring the accuracy of cloud based speech transcription services  
@@ -37,13 +52,13 @@ corpus_csv <- read.csv(file = "../../Data/corpus.csv")
 
 #### Synopis  
 
-*"Yet another article about automated transcription accuracy that put's the company writing it, on top"* you might say to yourself.  And, yes, technically you would be right.  But we here at [3Scribe](https://3scri.be) wanted to go a little further then just writing a glorified press release so we decided to produce a testing framework.  An open source series of small Node and R based apps, that will take a large number of outputs from multiple transcription services and to score them on multiple metrics.  Those scores will then be used to automatically update a series of reports such as the values you see in this README file.  In the interests of transparancy, all the test files, transcripts and apps are available.  We, and hopefully other voice researchers, will continue to add more samples to the repository and if you have samples you think should be part of the tests and would like to be involved, please reach out to us.  So, without further ado, here is the current standings in the accuracy leaderboard:
+*"Yet another article about automated transcription accuracy that put's the company writing it, on top"* you might say to yourself.  And, yes, technically you would be right.  But we here at [3Scribe](https://3scri.be) wanted to go a little further then just writing a glorified press release so we decided to produce a testing framework.  An open source series of small Node and R based apps, that will take a large number of outputs from multiple transcription services and to score them on multiple metrics.  Those scores will then be used to automatically update a series of reports such as the values you see in this README file.  In the interests of transparency, all the test files, transcripts and apps are available.  We, and hopefully other voice researchers, will continue to add more samples to the repository and if you have samples you think should be part of the tests and would like to be involved, please reach out to us.  So, without further ado, here is the current standings in the accuracy leader-board:
 
 ```{r echo=FALSE, warning=FALSE, comment="", results = 'asis'}
 pandoc.table(ddply(ddply(join(stats_csv, services_csv, by="Service", type="inner"), .(DisplayName), summarize, Samples=length(Key), WER=mean(WER)*100), .(WER)), justify = c('left', 'right', 'right')) 
 ```
 
-Now I'm not sure if 3Scribe will be at the top of that leaderboard when you read this.  But if we're not, you can believe we're working hard on our engine to squeeze an extra few percentage points of accuracy out of it and to get back on top.  Because that's what matters to us, delivering the most accurate transcript.  And if we are on top, then why not [create an account](https://3scri.be/register) and try us out with 30 minutes of free credit.  
+Now I'm not sure if 3Scribe will be at the top of that leader-board when you read this.  But if we're not, you can believe we're working hard on our engine to squeeze an extra few percentage points of accuracy out of it and to get back on top.  Because that's what matters to us, delivering the most accurate transcript.  And if we are on top, then why not [create an account](https://3scri.be/register) and try us out with 30 minutes of free credit.  
 
 Eddie Gahan  
 CTO, [3Scribe](https://3scri.be)
@@ -54,17 +69,17 @@ Initially we'll just be testing on a single metric, the global standard: ***Word
 
 Word Error Rate is calculated by comparing a reference transcript, the one that's 100% accurate, to the test transcript, in this case the outputs from the different engines.  When comparing, three values are sought:
 
-1. The number of **Substitutions**.  When the test engine has replaced a word with an incorect word i.e. *Goose* instead of *loose*.  Or *They're* instead of *Their*.
+1. The number of **Substitutions**.  When the test engine has replaced a word with an incorrect word i.e. *Goose* instead of *loose*.  Or *They're* instead of *Their*.
 2. The number of **Insertions**.  When the test engine has added an additional word e.g. *Two more* instead of *Tomorrow*.
 3. The number of **Deletions**.  When the test engine has removed a word that was specified in the reference e.g. *You need to go to home* instead of *You need to go to the home*.
 
 We then add the three values up and divide them by the total number of words in the reference transcript to get the WER.  
 
-Moving on from WER we want to add in extra metrics.  We're only testing English transcription at the moment so adding corpus in other languages is on the cards.  This [article](https://www.biometricupdate.com/202101/speaker-id-is-the-sleeper-biometric-function-speech-apps-need-to-nail) recently made a very good point regarding speaker diarization so we'll be adding that in to our scoring app once we've uploaded all of the test samples on hand.  Number formats and punctation will also be on the list but they can stray into the subjective realm.  To Oxford comma or not Oxford comma?  That is the question.  Breaking down the scores and analysing the samples by accent, gender and race is also highly important.  There's a horrible [hidden bias](https://news.stanford.edu/2020/03/23/automated-speech-recognition-less-accurate-blacks/) being built in to ASR systems and on-going monitoring to see how companies are addressing it is a duty that we must all work to fulfil.  
+Moving on from WER we want to add in extra metrics.  We're only testing English transcription at the moment so adding corpus in other languages is on the cards.  This [article](https://www.biometricupdate.com/202101/speaker-id-is-the-sleeper-biometric-function-speech-apps-need-to-nail) recently made a very good point regarding speaker diarization so we'll be adding that in to our scoring app once we've uploaded all of the test samples on hand.  Number formats and punctation will also be on the list but they can stray into the subjective realm.  To Oxford comma or not Oxford comma?  That is the question.  Breaking down the scores and analysing the samples by accent, gender and race is also highly important.  There's a horrible [hidden bias](https://news.stanford.edu/2020/03/23/automated-speech-recognition-less-accurate-blacks/) being built in to ASR systems and on-going monitoring to see how companies are addressing it is a duty that we must all work to fulfill.  
 
 #### Who it tests
 
-Ourselves obvs.  But for the others, we're picking companies that provide an automated transcription service, are cloud based, have an accessible API and are available for anyone to sign up to.  That may raise a question or two about why such-and-such company wasn't tested but there's usually a good reason.  For example: [Descript](https://descript.com).  They're concentrating on building a media editing product and buy in their transcript from a 3rd party.  [HappyScribe](https://www.happyscribe.com/) appear to be clients of [Speechmatics](https://speechmatics.com) and  so we've expluded them for much the same reason.  [Verbit](https://verbit.ai) doesn't offer a public sign-up page and [Otter](https://otter.ai) doesn't have a public API.  That still leaves us with the following companies:
+Ourselves obvs.  But for the others, we're picking companies that provide an automated transcription service, are cloud based, have an accessible API and are available for anyone to sign up to.  That may raise a question or two about why such-and-such company wasn't tested but there's usually a good reason.  For example: [Descript](https://descript.com).  They're concentrating on building a media editing product and buy in their transcript from a 3rd party.  [HappyScribe](https://www.happyscribe.com/) appear to be clients of [Speechmatics](https://speechmatics.com) and  so we've excluded them for much the same reason.  [Verbit](https://verbit.ai) doesn't offer a public sign-up page and [Otter](https://otter.ai) doesn't have a public API.  That still leaves us with the following companies:
 
 ```{r echo=FALSE, warning=FALSE, comment="", results = 'asis' }
 pandoc.list(sprintf("[%s](%s)", services_csv$DisplayName,services_csv$URL))
@@ -78,12 +93,12 @@ There are some standard sets of data such as LibriVoice and ClearVoice that are 
 
 ```{r echo=FALSE, warning=FALSE, comment="", results = 'asis'}
 panderOptions("table.split.table", Inf)
-pandoc.table(ddply(count(join(corpus_csv, stats_csv, by="Corpus", type="inner"), .(Corpus, DisplayName, Description, Source, Key)), .(sprintf("**%s**", DisplayName), Description, Source), summarize, Samples=length(Key)), col.names=c("Name", "Description", "Source", "Samples"),  justify = c('left', 'left', 'left', 'right'))
+pandoc.table(ddply(count(join(corpus_csv, stats_csv, by="Corpus", type="inner"), .(Corpus, DisplayName, Description, Source, Key, Duration)), .(sprintf("**%s**", DisplayName), Description, Source), summarize, Samples=length(Key), Duration=sum(Duration)), col.names=c("Name", "Description", "Source", "Samples", "Duration (seconds)"),  justify=c('left', 'left', 'left', 'right', 'right'))
 ```
 
 #### Automation
 
-In this repo you'll see a number of sub-directories.  One, *Transcripts* contains the reference and test texts for each of the sample files we're using.  The transcripts are stored in a simple JSON format as we need to additional information such as speaker identification, duration, accents etc.  The README in the directory will contain more detailed information about the structure.  The second sub-directory, *Apps* contains the Node and R files that perform the scoring and report building.  When new transcript files or changes to the R Markdown files are uploaded, a GitHub action is triggered to score every trancript that has a reference file, to store the results in a flat file database (in the Data sub-directory) and to flatten the data into a .csv file for use in the R files.  Once the data is flattened, the action process any R Markdown scripts to refresh stats reports in this repo.  This very README file is an example of one of those reports.  Wherever you see statistics in this text, such as the leaderboard or the Corpus list, that information is auto-generated.  Checkout the README files in each of the app folders for more information.
+In this repo you'll see a number of sub-directories.  One, *Transcripts* contains the reference and test texts for each of the sample files we're using.  The transcripts are stored in a simple JSON format as we need to additional information such as speaker identification, duration, accents etc.  The README in the directory will contain more detailed information about the structure.  The second sub-directory, *Apps* contains the Node and R files that perform the scoring and report building.  When new transcript files or changes to the R Markdown files are uploaded, a GitHub action is triggered to score every transcript that has a reference file, to store the results in a flat file database (in the Data sub-directory) and to flatten the data into a .csv file for use in the R files.  Once the data is flattened, the action process any R Markdown scripts to refresh stats reports in this repo.  This very README file is an example of one of those reports.  Wherever you see statistics in this text, such as the leader-board or the Corpus list, that information is auto-generated.  Checkout the README files in each of the app folders for more information.
 
 #### Future
 
