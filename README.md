@@ -16,12 +16,12 @@ framework. An open source series of small Node and R based apps, that
 will take a large number of outputs from multiple transcription services
 and to score them on multiple metrics. Those scores will then be used to
 automatically update a series of reports such as the values you see in
-this README file. In the interests of transparancy, all the test files,
+this README file. In the interests of transparency, all the test files,
 transcripts and apps are available. We, and hopefully other voice
 researchers, will continue to add more samples to the repository and if
 you have samples you think should be part of the tests and would like to
 be involved, please reach out to us. So, without further ado, here is
-the current standings in the accuracy leaderboard:
+the current standings in the accuracy leader-board:
 
 | DisplayName                  | Samples |   WER |
 | :--------------------------- | ------: | ----: |
@@ -33,7 +33,7 @@ the current standings in the accuracy leaderboard:
 | Microsoft Cognitive Services |      18 | 23.05 |
 | IBM Watson                   |      18 | 36.76 |
 
-Now I’m not sure if 3Scribe will be at the top of that leaderboard when
+Now I’m not sure if 3Scribe will be at the top of that leader-board when
 you read this. But if we’re not, you can believe we’re working hard on
 our engine to squeeze an extra few percentage points of accuracy out of
 it and to get back on top. Because that’s what matters to us, delivering
@@ -59,7 +59,7 @@ outputs from the different engines. When comparing, three values are
 sought:
 
 1.  The number of **Substitutions**. When the test engine has replaced a
-    word with an incorect word i.e. *Goose* instead of *loose*. Or
+    word with an incorrect word i.e. *Goose* instead of *loose*. Or
     *They’re* instead of *Their*.
 2.  The number of **Insertions**. When the test engine has added an
     additional word e.g. *Two more* instead of *Tomorrow*.
@@ -83,7 +83,7 @@ analysing the samples by accent, gender and race is also highly
 important. There’s a horrible [hidden
 bias](https://news.stanford.edu/2020/03/23/automated-speech-recognition-less-accurate-blacks/)
 being built in to ASR systems and on-going monitoring to see how
-companies are addressing it is a duty that we must all work to fulfil.
+companies are addressing it is a duty that we must all work to fulfill.
 
 #### Who it tests
 
@@ -95,7 +95,7 @@ there’s usually a good reason. For example:
 [Descript](https://descript.com). They’re concentrating on building a
 media editing product and buy in their transcript from a 3rd party.
 [HappyScribe](https://www.happyscribe.com/) appear to be clients of
-[Speechmatics](https://speechmatics.com) and so we’ve expluded them for
+[Speechmatics](https://speechmatics.com) and so we’ve excluded them for
 much the same reason. [Verbit](https://verbit.ai) doesn’t offer a public
 sign-up page and [Otter](https://otter.ai) doesn’t have a public API.
 That still leaves us with the following companies:
@@ -137,9 +137,9 @@ having to check them out, and that repo can be found
 README.md file contains details about each of the corpus but here is a
 quick summary:
 
-| Name           | Description                                                                                                               | Source                            | Samples |
-| :------------- | :------------------------------------------------------------------------------------------------------------------------ | :-------------------------------- | ------: |
-| **VoiceLogic** | A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic. | <https://voicelogic.com/samples/> |      18 |
+| Name           | Description                                                                                                               | Source                            | Samples | Duration (seconds) |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------ | :-------------------------------- | ------: | -----------------: |
+| **VoiceLogic** | A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic. | <https://voicelogic.com/samples/> |      18 |                 NA |
 
 #### Automation
 
@@ -151,15 +151,15 @@ etc. The README in the directory will contain more detailed information
 about the structure. The second sub-directory, *Apps* contains the Node
 and R files that perform the scoring and report building. When new
 transcript files or changes to the R Markdown files are uploaded, a
-GitHub action is triggered to score every trancript that has a reference
-file, to store the results in a flat file database (in the Data
-sub-directory) and to flatten the data into a .csv file for use in the R
-files. Once the data is flattened, the action process any R Markdown
-scripts to refresh stats reports in this repo. This very README file is
-an example of one of those reports. Wherever you see statistics in this
-text, such as the leaderboard or the Corpus list, that information is
-auto-generated. Checkout the README files in each of the app folders for
-more information.
+GitHub action is triggered to score every transcript that has a
+reference file, to store the results in a flat file database (in the
+Data sub-directory) and to flatten the data into a .csv file for use in
+the R files. Once the data is flattened, the action process any R
+Markdown scripts to refresh stats reports in this repo. This very README
+file is an example of one of those reports. Wherever you see statistics
+in this text, such as the leader-board or the Corpus list, that
+information is auto-generated. Checkout the README files in each of the
+app folders for more information.
 
 #### Future
 
