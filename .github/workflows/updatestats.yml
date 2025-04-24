@@ -1,0 +1,51 @@
+name: Auto-update the statistics when transcripts are updated.
+
+on:
+  # Allows manual running of this workflow from the Actions tab
+  workflow_dispatch:
+
+  # Triggers the workflow on push of new or updated transcript files.
+  push:
+    paths:
+    - 'Transcripts/**.json'
+    - 'Apps/**.rmd'
+
+jobs:
+  buildandrun:
+    name: Build, generate and collate the transcription statistics
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Apps/Scoring
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Run the scoring and collate commands
+        run: |
+            npm install
+            node score all
+            node collate    
+      
+      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-r@v2
+
+      - name: Install rmarkdown dependencies
+        run:  | 
+              Rscript -e 'install.packages(c("rmarkdown","ggplot2","plyr","pander"))'
+
+      - name: Generate project readme.md file with updated stats
+        run:  Rscript -e 'rmarkdown::render("README.rmd", output_dir = "../../")'
+        working-directory: ./Apps/Stats
+      - name: Push the updated stats back to the repo
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: 3Scribe Updates Stats bot
+          author_email: support@3scri.be
+          message: 'Auto-update of the stats files following an update to the transcripts folder.'
+          add: '["*.csv","*.fdb","*.md","*.png"]'
+        
+        
+        

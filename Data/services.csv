@@ -1,0 +1,12 @@
+Service,DisplayName,URL
+3scribe,3Scribe,https://3Scri.be
+aws,AWS Transcribe,https://aws.amazon.com/transcribe/
+assemblyai,AssenblyAI,https://www.assemblyai.com/
+speechmatics,Speechmatics,https://speechmatics.com
+microsoft,Microsoft Cognitive Services,https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/
+google,Google Cloud,https://cloud.google.com/speech-to-text
+ibm,IBM Watson,https://www.ibm.com/ie-en/marketplace/speech-to-text
+deepgram,Deepgram,https://deepgram.com/
+whisper,OpenAI Whisper,https://openai.com/index/whisper/
+elevenlabs,ElevenLabs,https://elevenlabs.io/
+oracle,Oracle Cloud Infrastructure,https://www.oracle.com/cloud/

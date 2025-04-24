@@ -1,0 +1,5 @@
+Dataset,DisplayName,Description,Source
+voicelogic,VoiceLogic,A collection of recorded phone calls used to demonstrate the capabilities of a voice marketing company called VoiceLogic.,https://voicelogic.com/samples/
+popuppodcasting,PopupPodcasting,Two small clips used in a comparision article by the company PopupPodcasting,https://popuppodcasting.ca/blog/automatic-transcription-services-compared
+rev,Rev,Tests used by the transcription company Rev.com to test people applying for a manual transcriber position.,
+magellan,Magellan,Example call recordings created by the outsourcing company Magellan Solutions,https://www.magellan-solutions.com/resources/sample-recordings/

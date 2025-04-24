@@ -1,0 +1,25 @@
+{
+  "name": "scoring",
+  "version": "1.0.0",
+  "description": "A command line application that takes a text transcript and a corresponding reference transcript as parameters and produces scoring such as WER.  These scores are then stored in a flat DB file.",
+  "main": "score.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "3Scribe",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/3Scribe/OpenAccuracyTesting.git"
+  },
+  "bin": {
+    "score": "score.js",
+    "collate": "collate.js"
+  },
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "dotenv": "^8.2.0",
+    "flat-db": "^4.0.0",
+    "word-error-rate": "0.0.7"
+  }
+}
