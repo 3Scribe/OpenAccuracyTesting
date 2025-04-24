@@ -1,0 +1,202 @@
+Dataset,Key,Service,Duration,WER
+voicelogic,rcastweedman827144,whisper,26,0.02857142857142857
+voicelogic,rcastweedman827144,speechmatics,26,0.08571428571428572
+voicelogic,rcastweedman827144,google,26,0.14285714285714285
+voicelogic,rcastweedman827144,deepgram,26,0.08108108108108109
+voicelogic,rcastweedman827144,aws,26,0.08571428571428572
+voicelogic,rcastweedman827144,3scribe,26,0.11428571428571428
+voicelogic,rcasttravel613230,whisper,36,0.10752688172043011
+voicelogic,rcasttravel613230,speechmatics,36,0.08602150537634409
+voicelogic,rcasttravel613230,google,36,0.1978021978021978
+voicelogic,rcasttravel613230,deepgram,36,0.13541666666666666
+voicelogic,rcasttravel613230,aws,36,0.07692307692307693
+voicelogic,rcasttravel613230,3scribe,36,0.07692307692307693
+voicelogic,rcasttelehoppaymentreminder125812,whisper,31,0.03389830508474576
+voicelogic,rcasttelehoppaymentreminder125812,speechmatics,31,0.05084745762711865
+voicelogic,rcasttelehoppaymentreminder125812,google,31,0.11864406779661017
+voicelogic,rcasttelehoppaymentreminder125812,deepgram,31,0.08196721311475409
+voicelogic,rcasttelehoppaymentreminder125812,aws,31,0.03389830508474576
+voicelogic,rcasttelehoppaymentreminder125812,3scribe,31,0.03389830508474576
+voicelogic,rcaststatefarm200326,whisper,26,0
+voicelogic,rcaststatefarm200326,speechmatics,26,0.12280701754385964
+voicelogic,rcaststatefarm200326,google,26,0.125
+voicelogic,rcaststatefarm200326,deepgram,26,0.1206896551724138
+voicelogic,rcaststatefarm200326,aws,26,0.07142857142857142
+voicelogic,rcaststatefarm200326,3scribe,26,0.017857142857142856
+voicelogic,rcastsprintcanada718576,whisper,56,0.006535947712418301
+voicelogic,rcastsprintcanada718576,speechmatics,56,0.09740259740259741
+voicelogic,rcastsprintcanada718576,google,56,0.09032258064516129
+voicelogic,rcastsprintcanada718576,deepgram,56,0.15757575757575756
+voicelogic,rcastsprintcanada718576,aws,56,0.07142857142857142
+voicelogic,rcastsprintcanada718576,3scribe,56,0.05128205128205128
+voicelogic,rcastsearsphoto514001,whisper,28,0.02564102564102564
+voicelogic,rcastsearsphoto514001,speechmatics,28,0.1125
+voicelogic,rcastsearsphoto514001,google,28,0.1794871794871795
+voicelogic,rcastsearsphoto514001,deepgram,28,0.08860759493670886
+voicelogic,rcastsearsphoto514001,aws,28,0.0625
+voicelogic,rcastsearsphoto514001,3scribe,28,0.0625
+voicelogic,rcastrecruitmentcustomintro814659,whisper,21,0.024390243902439025
+voicelogic,rcastrecruitmentcustomintro814659,speechmatics,21,0.04878048780487805
+voicelogic,rcastrecruitmentcustomintro814659,google,21,0.14634146341463414
+voicelogic,rcastrecruitmentcustomintro814659,deepgram,21,0.07317073170731707
+voicelogic,rcastrecruitmentcustomintro814659,aws,21,0.04878048780487805
+voicelogic,rcastrecruitmentcustomintro814659,3scribe,21,0.024390243902439025
+voicelogic,rcastpoliticalusa360111,whisper,45,0.04132231404958678
+voicelogic,rcastpoliticalusa360111,speechmatics,45,0.03305785123966942
+voicelogic,rcastpoliticalusa360111,google,45,0.21487603305785125
+voicelogic,rcastpoliticalusa360111,deepgram,45,0.03305785123966942
+voicelogic,rcastpoliticalusa360111,aws,45,0.04132231404958678
+voicelogic,rcastpoliticalusa360111,3scribe,45,0.04132231404958678
+voicelogic,rcastpolitical124579,whisper,71,0
+voicelogic,rcastpolitical124579,speechmatics,71,0.5483870967741935
+voicelogic,rcastpolitical124579,google,71,0.43373493975903615
+voicelogic,rcastpolitical124579,deepgram,71,0.3132530120481928
+voicelogic,rcastpolitical124579,aws,71,0.3614457831325301
+voicelogic,rcastpolitical124579,3scribe,71,0.27710843373493976
+voicelogic,rcastorleansfundraiser554367,whisper,60,0
+voicelogic,rcastorleansfundraiser554367,speechmatics,60,0.4805194805194805
+voicelogic,rcastorleansfundraiser554367,google,60,0.26
+voicelogic,rcastorleansfundraiser554367,deepgram,60,0.19791666666666666
+voicelogic,rcastorleansfundraiser554367,aws,60,0.16129032258064516
+voicelogic,rcastorleansfundraiser554367,3scribe,60,0.11827956989247312
+voicelogic,rcastnurseassoc200256,whisper,81,0.027522935779816515
+voicelogic,rcastnurseassoc200256,speechmatics,81,0.07339449541284404
+voicelogic,rcastnurseassoc200256,google,81,0.13302752293577982
+voicelogic,rcastnurseassoc200256,deepgram,81,0.084070796460177
+voicelogic,rcastnurseassoc200256,aws,81,0.0871559633027523
+voicelogic,rcastnurseassoc200256,3scribe,81,0.045871559633027525
+voicelogic,rcastnotice216750,whisper,41,0.011235955056179775
+voicelogic,rcastnotice216750,speechmatics,41,0.06741573033707865
+voicelogic,rcastnotice216750,google,41,0.11363636363636363
+voicelogic,rcastnotice216750,deepgram,41,0.11956521739130435
+voicelogic,rcastnotice216750,aws,41,0.022727272727272728
+voicelogic,rcastnotice216750,3scribe,41,0.011363636363636364
+voicelogic,rcastnationalpost200278,whisper,47,0.08421052631578947
+voicelogic,rcastnationalpost200278,speechmatics,47,0.10526315789473684
+voicelogic,rcastnationalpost200278,google,47,0.15463917525773196
+voicelogic,rcastnationalpost200278,deepgram,47,0.27927927927927926
+voicelogic,rcastnationalpost200278,aws,47,0.09473684210526316
+voicelogic,rcastnationalpost200278,3scribe,47,0.10638297872340426
+voicelogic,rcastmortgagebusiness797952,whisper,56,0.1
+voicelogic,rcastmortgagebusiness797952,speechmatics,56,0.11666666666666667
+voicelogic,rcastmortgagebusiness797952,google,56,0.1694915254237288
+voicelogic,rcastmortgagebusiness797952,deepgram,56,0.13008130081300814
+voicelogic,rcastmortgagebusiness797952,aws,56,0.07692307692307693
+voicelogic,rcastmortgagebusiness797952,3scribe,56,0.07692307692307693
+voicelogic,rcastmembersmeeting121213,whisper,42,0.12857142857142856
+voicelogic,rcastmembersmeeting121213,speechmatics,42,0.11267605633802817
+voicelogic,rcastmembersmeeting121213,google,42,0.18571428571428572
+voicelogic,rcastmembersmeeting121213,deepgram,42,0.27631578947368424
+voicelogic,rcastmembersmeeting121213,aws,42,0.08571428571428572
+voicelogic,rcastmembersmeeting121213,3scribe,42,0.08571428571428572
+voicelogic,rcastmbna200302,whisper,37,0.08333333333333333
+voicelogic,rcastmbna200302,speechmatics,37,0.06944444444444445
+voicelogic,rcastmbna200302,google,37,0.22784810126582278
+voicelogic,rcastmbna200302,deepgram,37,0.2978723404255319
+voicelogic,rcastmbna200302,aws,37,0.06944444444444445
+voicelogic,rcastmbna200302,3scribe,37,0.08333333333333333
+voicelogic,rcastjohnmanly852325,whisper,37,0.02
+voicelogic,rcastjohnmanly852325,speechmatics,37,0.03
+voicelogic,rcastjohnmanly852325,google,37,0.09
+voicelogic,rcastjohnmanly852325,deepgram,37,0.04
+voicelogic,rcastjohnmanly852325,aws,37,0.05
+voicelogic,rcastjohnmanly852325,3scribe,37,0.02
+voicelogic,rcastjacklaytonpolitical231316,whisper,29,0.06976744186046512
+voicelogic,rcastjacklaytonpolitical231316,speechmatics,29,0.06976744186046512
+voicelogic,rcastjacklaytonpolitical231316,google,29,0.12790697674418605
+voicelogic,rcastjacklaytonpolitical231316,deepgram,29,0.08045977011494253
+voicelogic,rcastjacklaytonpolitical231316,aws,29,0.05813953488372093
+voicelogic,rcastjacklaytonpolitical231316,3scribe,29,0.03488372093023256
+voicelogic,rcastjacklayton591545,whisper,30,0.1
+voicelogic,rcastjacklayton591545,speechmatics,30,0.11428571428571428
+voicelogic,rcastjacklayton591545,google,30,0.15714285714285714
+voicelogic,rcastjacklayton591545,deepgram,30,0.26506024096385544
+voicelogic,rcastjacklayton591545,aws,30,0.1
+voicelogic,rcastjacklayton591545,3scribe,30,0.08571428571428572
+voicelogic,rcastfinancialconsultant724744,whisper,51,0.00847457627118644
+voicelogic,rcastfinancialconsultant724744,speechmatics,51,0.01694915254237288
+voicelogic,rcastfinancialconsultant724744,google,51,0.13559322033898305
+voicelogic,rcastfinancialconsultant724744,deepgram,51,0.06666666666666667
+voicelogic,rcastfinancialconsultant724744,aws,51,0.059322033898305086
+voicelogic,rcastfinancialconsultant724744,3scribe,51,0.025423728813559324
+voicelogic,rcastedbraodbent613292,whisper,29,0.0898876404494382
+voicelogic,rcastedbraodbent613292,speechmatics,29,0.06741573033707865
+voicelogic,rcastedbraodbent613292,google,29,0.12359550561797752
+voicelogic,rcastedbraodbent613292,deepgram,29,0.1111111111111111
+voicelogic,rcastedbraodbent613292,3scribe,29,0.033707865168539325
+voicelogic,rcastcostcorecallnotice212198,whisper,56,0.045112781954887216
+voicelogic,rcastcostcorecallnotice212198,speechmatics,56,0.037037037037037035
+voicelogic,rcastcostcorecallnotice212198,google,56,0.14285714285714285
+voicelogic,rcastcostcorecallnotice212198,deepgram,56,0.14189189189189189
+voicelogic,rcastcostcorecallnotice212198,aws,56,0.03759398496240601
+voicelogic,rcastcostcorecallnotice212198,3scribe,56,0.03759398496240601
+voicelogic,rcastcostcointromessage751619,whisper,11,0.375
+voicelogic,rcastcostcointromessage751619,speechmatics,11,0.25
+voicelogic,rcastcostcointromessage751619,google,11,0.1875
+voicelogic,rcastcostcointromessage751619,deepgram,11,0.3125
+voicelogic,rcastcostcointromessage751619,aws,11,0.375
+voicelogic,rcastcostcointromessage751619,3scribe,11,0.375
+voicelogic,rcastcertigardrepairnotice130007,whisper,26,0.0967741935483871
+voicelogic,rcastcertigardrepairnotice130007,speechmatics,26,0.22058823529411764
+voicelogic,rcastcertigardrepairnotice130007,google,26,0.13114754098360656
+voicelogic,rcastcertigardrepairnotice130007,deepgram,26,0.16666666666666666
+voicelogic,rcastcertigardrepairnotice130007,aws,26,0.14754098360655737
+voicelogic,rcastcertigardrepairnotice130007,3scribe,26,0.0967741935483871
+voicelogic,rcastcable200489,whisper,31,0.14864864864864866
+voicelogic,rcastcable200489,speechmatics,31,0.0684931506849315
+voicelogic,rcastcable200489,google,31,0.17333333333333334
+voicelogic,rcastcable200489,deepgram,31,0.11538461538461539
+voicelogic,rcastcable200489,aws,31,0.1232876712328767
+voicelogic,rcastcable200489,3scribe,31,0.06756756756756757
+voicelogic,rcastautodealer159541,whisper,36,0.32710280373831774
+voicelogic,rcastautodealer159541,speechmatics,36,0.12222222222222222
+voicelogic,rcastautodealer159541,google,36,0.24719101123595505
+voicelogic,rcastautodealer159541,deepgram,36,0.22340425531914893
+voicelogic,rcastautodealer159541,aws,36,0.11235955056179775
+voicelogic,rcastautodealer159541,3scribe,36,0.1348314606741573
+voicelogic,rcastassocmessageintro858586,whisper,16,0.09090909090909091
+voicelogic,rcastassocmessageintro858586,speechmatics,16,0.14285714285714285
+voicelogic,rcastassocmessageintro858586,google,16,0.23809523809523808
+voicelogic,rcastassocmessageintro858586,deepgram,16,0.09523809523809523
+voicelogic,rcastassocmessageintro858586,aws,16,0.047619047619047616
+voicelogic,rcastassocmessageintro858586,3scribe,16,0.09090909090909091
+voicelogic,rcastallstateinsurance610100,whisper,51,0.15476190476190477
+voicelogic,rcastallstateinsurance610100,speechmatics,51,0.10126582278481013
+voicelogic,rcastallstateinsurance610100,google,51,0.11392405063291139
+voicelogic,rcastallstateinsurance610100,deepgram,51,0.11904761904761904
+voicelogic,rcastallstateinsurance610100,aws,51,0.08860759493670886
+voicelogic,rcastallstateinsurance610100,3scribe,51,0.08860759493670886
+rev,boeings big bet,whisper,157,0.0273972602739726
+rev,boeings big bet,speechmatics,157,0.06306306306306306
+rev,boeings big bet,google,157,0.1793103448275862
+rev,boeings big bet,deepgram,157,0.06108597285067873
+rev,boeings big bet,aws,157,0.1103448275862069
+rev,boeings big bet,3scribe,157,0.03416856492027335
+popuppodcasting,matty,whisper,474,0.15146831530139104
+popuppodcasting,matty,google,474,0.21715610510046368
+popuppodcasting,matty,deepgram,474,0.1777434312210201
+popuppodcasting,matty,aws,474,0.1615146831530139
+popuppodcasting,matty,3scribe,474,0.11282843894899536
+popuppodcasting,"birthday,",whisper,128,0.1967741935483871
+popuppodcasting,"birthday,",google,128,0.2282958199356913
+popuppodcasting,"birthday,",aws,128,0.26851851851851855
+popuppodcasting,"birthday,",3scribe,128,0.14968152866242038
+magellan,sample order taking,whisper,116,0.2723404255319149
+magellan,sample order taking,speechmatics,116,0.2765957446808511
+magellan,sample order taking,google,116,0.3574468085106383
+magellan,sample order taking,deepgram,116,0.32269503546099293
+magellan,sample order taking,3scribe,116,0.17154811715481172
+magellan,inbound sample 2,whisper,229,0.20741989881956155
+magellan,inbound sample 2,speechmatics,229,0.19831932773109243
+magellan,inbound sample 2,google,229,0.4654300168634064
+magellan,inbound sample 2,deepgram,229,0.22272727272727272
+magellan,inbound sample 2,aws,229,0.16666666666666666
+magellan,inbound sample 2,3scribe,229,0.12146422628951747
+magellan,inbound sample 1,whisper,567,0.20302171860245516
+magellan,inbound sample 1,speechmatics,567,0.21383075523202913
+magellan,inbound sample 1,google,567,0.31444759206798867
+magellan,inbound sample 1,deepgram,567,0.2945264986967854
+magellan,inbound sample 1,aws,567,0.25857519788918204
+magellan,inbound sample 1,3scribe,567,0.13302752293577982
+magellan,customer service sample,speechmatics,358,0.20685579196217493
+magellan,customer service sample,deepgram,358,0.1956769055745165
